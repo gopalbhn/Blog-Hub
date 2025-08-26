@@ -1,0 +1,71 @@
+import { getAdapter } from "axios";
+
+const backendUrl = "http://localhost:3000/api/v1";
+
+const api ={
+    register:{
+        url:`${backendUrl}/user/register`,
+        method:"POST"
+    },
+    login:{
+        url:`${backendUrl}/user/login`,
+        method:"POST"
+    },
+    logout:{
+        url:`${backendUrl}/user/logout`,
+        method:"GET"
+    },
+    getInfo:{
+        url:`${backendUrl}/user/getInfo`,
+        method:"GET"
+    },
+    changePassword:{
+        url:`${backendUrl}/user/changePassword/`,
+        method:"PATCH"
+    },
+    forgetPassword:{
+        url:`${backendUrl}/user/forget-password`,
+        method:"POST"
+    },
+    createPost:{
+        url:`${backendUrl}/post`,
+        method:"POST"
+    },
+    changeRole:{
+        url:`${backendUrl}/user/change-role`,
+        method:"PUT"
+    },
+    editPost:{
+        url:`${backendUrl}/post/edit-post/`,
+        method:"POST"
+    },
+    getAllPost:{
+        url:`${backendUrl}/post`,
+        method:"GET"
+    },
+    getOnepost:{
+        url:`${backendUrl}/post/`,
+        method:"GET"
+    },
+    addComment:{
+        url:`${backendUrl}/post/add-comments/`,
+        method:"POST"
+    },
+    deletePost:{
+        url:`${backendUrl}/post`,
+        method:"DELETE"
+    },
+    getUserPosts:{
+        url:`${backendUrl}/post/user-posts`,
+        method:"GET"
+    },
+    getAllUser:{
+        url:`${backendUrl}/admin/get-user`,
+        method:"GET"
+    },
+    deleteUser:{
+        url:`${backendUrl}/admin/delete-user/`,
+        method:"DELETE"
+    }
+}
+export default api
